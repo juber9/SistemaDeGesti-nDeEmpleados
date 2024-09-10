@@ -6,5 +6,10 @@ namespace SistemaDeGestiónDeEmpleados
         {
             InitializeComponent();
         }
+
+        private void btnMostrarEmpleados_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

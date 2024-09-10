@@ -129,6 +129,7 @@
             btnMostrarEmpleados.TabIndex = 2;
             btnMostrarEmpleados.Text = "Mostrar empleados";
             btnMostrarEmpleados.UseVisualStyleBackColor = true;
+            btnMostrarEmpleados.Click += btnMostrarEmpleados_Click;
             // 
             // btnAgregarEmpleados
             // 
