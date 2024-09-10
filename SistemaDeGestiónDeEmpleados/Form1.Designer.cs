@@ -30,16 +30,16 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            dtpFechaDeRegistro = new DateTimePicker();
-            txtIngresarDepartamento = new TextBox();
+            txtIngresarNombre = new TextBox();
             txtIngresarRol = new TextBox();
+            txtIngresarDepartamento = new TextBox();
+            dtpFechaDeRegistro = new DateTimePicker();
+            label4 = new Label();
+            label5 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             btnMostrarEmpleados = new Button();
             btnAgregarEmpleados = new Button();
-            label5 = new Label();
-            txtIngresarNombre = new TextBox();
             lstMostrarDescripcion = new ListBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -72,23 +72,33 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Registro";
             // 
-            // label2
+            // txtIngresarNombre
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(148, 40);
-            label2.Name = "label2";
-            label2.Size = new Size(171, 28);
-            label2.TabIndex = 0;
-            label2.Text = "Fecha de registro: ";
+            txtIngresarNombre.Location = new Point(481, 120);
+            txtIngresarNombre.Name = "txtIngresarNombre";
+            txtIngresarNombre.Size = new Size(371, 34);
+            txtIngresarNombre.TabIndex = 2;
             // 
-            // label3
+            // txtIngresarRol
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(148, 123);
-            label3.Name = "label3";
-            label3.Size = new Size(160, 28);
-            label3.TabIndex = 0;
-            label3.Text = "Ingresar nombre:";
+            txtIngresarRol.Location = new Point(481, 167);
+            txtIngresarRol.Name = "txtIngresarRol";
+            txtIngresarRol.Size = new Size(371, 34);
+            txtIngresarRol.TabIndex = 2;
+            // 
+            // txtIngresarDepartamento
+            // 
+            txtIngresarDepartamento.Location = new Point(481, 78);
+            txtIngresarDepartamento.Name = "txtIngresarDepartamento";
+            txtIngresarDepartamento.Size = new Size(371, 34);
+            txtIngresarDepartamento.TabIndex = 2;
+            // 
+            // dtpFechaDeRegistro
+            // 
+            dtpFechaDeRegistro.Location = new Point(481, 35);
+            dtpFechaDeRegistro.Name = "dtpFechaDeRegistro";
+            dtpFechaDeRegistro.Size = new Size(371, 34);
+            dtpFechaDeRegistro.TabIndex = 1;
             // 
             // label4
             // 
@@ -99,26 +109,32 @@
             label4.TabIndex = 0;
             label4.Text = "Ingresar departamento:";
             // 
-            // dtpFechaDeRegistro
+            // label5
             // 
-            dtpFechaDeRegistro.Location = new Point(481, 35);
-            dtpFechaDeRegistro.Name = "dtpFechaDeRegistro";
-            dtpFechaDeRegistro.Size = new Size(371, 34);
-            dtpFechaDeRegistro.TabIndex = 1;
+            label5.AutoSize = true;
+            label5.Location = new Point(148, 170);
+            label5.Name = "label5";
+            label5.Size = new Size(115, 28);
+            label5.TabIndex = 0;
+            label5.Text = "Ingresar rol:";
             // 
-            // txtIngresarDepartamento
+            // label3
             // 
-            txtIngresarDepartamento.Location = new Point(481, 78);
-            txtIngresarDepartamento.Name = "txtIngresarDepartamento";
-            txtIngresarDepartamento.Size = new Size(371, 34);
-            txtIngresarDepartamento.TabIndex = 2;
+            label3.AutoSize = true;
+            label3.Location = new Point(148, 123);
+            label3.Name = "label3";
+            label3.Size = new Size(160, 28);
+            label3.TabIndex = 0;
+            label3.Text = "Ingresar nombre:";
             // 
-            // txtIngresarRol
+            // label2
             // 
-            txtIngresarRol.Location = new Point(481, 167);
-            txtIngresarRol.Name = "txtIngresarRol";
-            txtIngresarRol.Size = new Size(371, 34);
-            txtIngresarRol.TabIndex = 2;
+            label2.AutoSize = true;
+            label2.Location = new Point(148, 40);
+            label2.Name = "label2";
+            label2.Size = new Size(171, 28);
+            label2.TabIndex = 0;
+            label2.Text = "Fecha de registro: ";
             // 
             // btnMostrarEmpleados
             // 
@@ -139,22 +155,7 @@
             btnAgregarEmpleados.TabIndex = 2;
             btnAgregarEmpleados.Text = "Agregar empleados";
             btnAgregarEmpleados.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(148, 170);
-            label5.Name = "label5";
-            label5.Size = new Size(115, 28);
-            label5.TabIndex = 0;
-            label5.Text = "Ingresar rol:";
-            // 
-            // txtIngresarNombre
-            // 
-            txtIngresarNombre.Location = new Point(481, 120);
-            txtIngresarNombre.Name = "txtIngresarNombre";
-            txtIngresarNombre.Size = new Size(371, 34);
-            txtIngresarNombre.TabIndex = 2;
+            btnAgregarEmpleados.Click += btnAgregarEmpleados_Click;
             // 
             // lstMostrarDescripcion
             // 

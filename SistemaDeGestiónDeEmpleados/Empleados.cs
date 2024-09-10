@@ -20,4 +20,11 @@
         public string Nombre { get; set; }
         public string rol { get; set; }
     }
+
+    // Método para registrar empleados 
+    public string RegistrarEmpleados(string departamento, string nombre, string rol, DateTime fechaRegistro)
+    {
+        Empleados nuevoRegistro = new Empleados(departamento, nombre, rol, fechaRegistro);
+        return $"Registro de empleado exitoso: {nuevoRegistro}";
+    }
 }
