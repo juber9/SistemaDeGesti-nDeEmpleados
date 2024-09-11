@@ -9,8 +9,14 @@ namespace SistemaDeGestiónDeEmpleados
 
         private void btnMostrarEmpleados_Click(object sender, EventArgs e)
         {
-            //if ()
+            lstMostrarDescripcion.Items.Clear();
 
+            string[] empleados = Empleados.MostrarEmpleados();
+
+            foreach (string empleado in empleados)
+            {
+                lstMostrarDescripcion.Items.Add(empleado);
+            }
         }
 
         private void btnAgregarEmpleados_Click(object sender, EventArgs e)
@@ -20,6 +26,10 @@ namespace SistemaDeGestiónDeEmpleados
             string rol = txtIngresarRol.Text;
             DateTime fechaRegistro = dtpFechaDeRegistro.Value;
             Empleados nuevoRegistro = new Empleados(nombre, departamento, rol, fechaRegistro);
+
+            string resultado = Empleados.RegistrarEmpleados(departamento, nombre, rol, fechaRegistro);
+
+            MessageBox.Show(resultado);
         }
     }
 }

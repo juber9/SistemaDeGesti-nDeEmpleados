@@ -10,7 +10,7 @@
     public Empleados(string departamento, string nombre, string rol, DateTime fechaRegistro)
     {
         this.departamento = departamento;
-        this.nombre = nombre; 
+        this.nombre = nombre;
         this.rol = rol;
         this.fechaRegistro = fechaRegistro;
     }
@@ -23,7 +23,7 @@
     }
 
     // Método para registrar empleados 
-    public string RegistrarEmpleados(string departamento, string nombre, string rol, DateTime fechaRegistro)
+    public static string RegistrarEmpleados(string departamento, string nombre, string rol, DateTime fechaRegistro)
     {
         if (contadorEmpleados == registroDeEmpleados.Length)
         {
@@ -38,22 +38,24 @@
     }
 
     // Método para mostrar los empleados 
-    public string MostrarEmpleados()
+    public static string[] MostrarEmpleados()
     {
         if (contadorEmpleados == 0)
         {
-            return $"No hay empleados registrados";
+            return new string[] { "No hay empleados registrados." };
         }
 
-        string mostrar = "Empleados registrados: \n";
+        // Creamos un arreglo de cadenas para almacenar los detalles de los empleados
+        string[] listaEmpleados = new string[contadorEmpleados];
 
-
-        for (int i = 0; i < contadorEmpleados; i++) 
+        // Rellenamos el arreglo con la información de cada empleado
+        for (int i = 0; i < contadorEmpleados; i++)
         {
-            Empleados empleado = registroDeEmpleados[i];   
-            mostrar += $"Nombre del empleado: {empleado.nombre}, departamento: {empleado.departamento}, rol: {empleado.rol}, fecha de registro: {empleado.fechaRegistro}";
+            Empleados empleado = registroDeEmpleados[i];
+            listaEmpleados[i] = $"Nombre del empleado: {empleado.nombre}, Departamento: {empleado.departamento}, Rol: {empleado.rol}, Fecha de registro: {empleado.fechaRegistro.ToShortDateString()}";
         }
 
-        return mostrar;
+        return listaEmpleados;
     }
+
 }
