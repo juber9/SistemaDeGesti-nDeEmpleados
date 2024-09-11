@@ -25,16 +25,24 @@
     // Método para registrar empleados 
     public static string RegistrarEmpleados(string departamento, string nombre, string rol, DateTime fechaRegistro)
     {
-        if (contadorEmpleados == registroDeEmpleados.Length)
+        try
         {
-            return $"El arreglo está lleno";
+            if (contadorEmpleados == registroDeEmpleados.Length)
+            {
+                return $"El arreglo está lleno";
+            }
+
+            Empleados nuevoRegistro = new Empleados(departamento, nombre, rol, fechaRegistro);
+            registroDeEmpleados[contadorEmpleados] = nuevoRegistro;
+            contadorEmpleados++;
+
+            return $"Registro de empleados exitoso: {nombre}, {departamento}, {rol}, {fechaRegistro}";
         }
-
-        Empleados nuevoRegistro = new Empleados(departamento, nombre, rol, fechaRegistro);
-        registroDeEmpleados[contadorEmpleados] = nuevoRegistro;
-        contadorEmpleados++;
-
-        return $"Registro de empleados exitoso: {nombre}, {departamento}, {rol}, {fechaRegistro}";
+        catch (Exception ex)
+        {
+            return $"Error al registrar empleado: {ex.Message}";
+        }
+        
     }
 
     // Método para mostrar los empleados 
